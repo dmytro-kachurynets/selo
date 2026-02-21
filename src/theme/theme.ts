@@ -2,7 +2,7 @@ import { createTheme, ThemeOptions } from '@mui/material/styles';
 
 const sharedTheme: ThemeOptions = {
   typography: {
-    fontFamily: '"Noto Sans Variable", "Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: '"Noto Sans Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     h1: {
       fontFamily: '"Roboto Slab Variable", serif',
     },

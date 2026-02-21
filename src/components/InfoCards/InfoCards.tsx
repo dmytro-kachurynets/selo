@@ -4,32 +4,32 @@ import React from 'react';
 import { Box, Container, Grid, Card, CardContent, Typography } from '@mui/material';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import PhotoLibraryIcon from '@mui/icons-material/PhotoLibrary';
-import InfoIcon from '@mui/icons-material/Info';
+import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 
 const cards = [
   {
     icon: <NewspaperIcon fontSize="large" />,
     title: 'Новини',
-    description: 'Актуальні новини та події нашого села. Слідкуйте за останніми оновленнями.',
+    description: 'Актуальні події та оголошення Женишківської громади. Будьте в курсі останніх новин.',
     href: '/news',
   },
   {
-    icon: <InfoIcon fontSize="large" />,
-    title: 'Про село',
-    description: 'Історія, географія та цікаві факти про наше село та його мешканців.',
-    href: '/about',
+    icon: <HistoryEduIcon fontSize="large" />,
+    title: 'Історія',
+    description: 'Від неоліту до сьогодення: тисячоліття на Поділлі, козацькі повстання та сучасність.',
+    href: '/history',
   },
   {
     icon: <PhotoLibraryIcon fontSize="large" />,
     title: 'Галерея',
-    description: 'Фотографії природи, свят та повсякденного життя нашого села.',
+    description: 'Фотографії природи, краєвидів, свят та повсякденного життя мешканців села.',
     href: '/gallery',
   },
   {
     icon: <ContactMailIcon fontSize="large" />,
     title: 'Контакти',
-    description: "Зв'яжіться з нами. Адреси, телефони та форма зворотного зв'язку.",
+    description: "Адреси, телефони та форма зворотного зв'язку з місцевою радою та громадою.",
     href: '/contacts',
   },
 ];
@@ -65,7 +65,7 @@ export default function InfoCards() {
             mb: { xs: 4, md: 6 },
           }}
         >
-          Знайдіть потрібну інформацію про наше село
+          Знайдіть потрібну інформацію про Женишківці
         </Typography>
 
         <Grid container spacing={3}>

@@ -1,46 +1,73 @@
 'use client';
 
 import React from 'react';
-import { Box, Container, Typography, Button, Stack } from '@mui/material';
+import { Box, Container, Typography, Button, Stack, Chip } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import PlaceIcon from '@mui/icons-material/Place';
 
 export default function Hero() {
   return (
     <Box
       component="section"
       sx={{
-        minHeight: { xs: '70vh', md: '80vh' },
+        minHeight: { xs: '80vh', md: '88vh' },
         display: 'flex',
         alignItems: 'center',
         position: 'relative',
         overflow: 'hidden',
         background: (theme) =>
           theme.palette.mode === 'dark'
-            ? 'linear-gradient(135deg, #1a120b 0%, #2d1f14 60%, #1e2a1c 100%)'
-            : 'linear-gradient(135deg, #faf8f5 0%, #f5ede4 60%, #eef2ec 100%)',
+            ? 'linear-gradient(150deg, #1a120b 0%, #2d1f14 50%, #1a2318 100%)'
+            : 'linear-gradient(150deg, #faf8f5 0%, #f2e8dc 50%, #eaf0e7 100%)',
       }}
     >
-      {/* Decorative background circle */}
+      {/* Decorative blobs */}
       <Box
         sx={{
           position: 'absolute',
-          top: '-15%',
-          right: '-10%',
-          width: { xs: 300, md: 500 },
-          height: { xs: 300, md: 500 },
+          top: '-10%',
+          right: '-8%',
+          width: { xs: 320, md: 560 },
+          height: { xs: 320, md: 560 },
           borderRadius: '50%',
           background: (theme) =>
-            `radial-gradient(circle, ${theme.palette.primary.main}22 0%, transparent 70%)`,
+            `radial-gradient(circle, ${theme.palette.primary.main}1a 0%, transparent 70%)`,
+          pointerEvents: 'none',
+        }}
+      />
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: '-15%',
+          left: '-5%',
+          width: { xs: 200, md: 380 },
+          height: { xs: 200, md: 380 },
+          borderRadius: '50%',
+          background: (theme) =>
+            `radial-gradient(circle, ${theme.palette.secondary.main}15 0%, transparent 70%)`,
           pointerEvents: 'none',
         }}
       />
 
       <Container maxWidth="lg">
-        <Stack spacing={3} sx={{ maxWidth: 680 }}>
+        <Stack spacing={3} sx={{ maxWidth: 720 }}>
+          <Chip
+            icon={<PlaceIcon />}
+            label="Хмельницька область · Хмельницький район"
+            size="small"
+            sx={{
+              width: 'fit-content',
+              bgcolor: 'primary.main',
+              color: 'primary.contrastText',
+              fontWeight: 500,
+              '& .MuiChip-icon': { color: 'primary.contrastText' },
+            }}
+          />
+
           <Typography
             variant="overline"
             sx={{
-              color: 'primary.main',
+              color: 'text.secondary',
               letterSpacing: 3,
               fontWeight: 600,
             }}
@@ -52,15 +79,25 @@ export default function Hero() {
             variant="h1"
             sx={{
               fontFamily: 'var(--font-roboto-slab)',
-              fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4.5rem' },
+              fontSize: { xs: '2.8rem', sm: '3.8rem', md: '5rem' },
               fontWeight: 700,
-              lineHeight: 1.15,
+              lineHeight: 1.1,
               color: 'text.primary',
             }}
           >
-            Наше{' '}
             <Box component="span" sx={{ color: 'primary.main' }}>
-              село
+              Женишківці
+            </Box>
+            {' '}—{' '}
+            <Box
+              component="span"
+              sx={{
+                fontSize: { xs: '1.8rem', sm: '2.4rem', md: '3rem' },
+                fontWeight: 400,
+                color: 'text.secondary',
+              }}
+            >
+              наше рідне село
             </Box>
           </Typography>
 
@@ -69,12 +106,17 @@ export default function Hero() {
             sx={{
               fontWeight: 400,
               color: 'text.secondary',
-              lineHeight: 1.6,
-              fontSize: { xs: '1rem', md: '1.25rem' },
+              lineHeight: 1.7,
+              fontSize: { xs: '1rem', md: '1.2rem' },
+              maxWidth: 600,
             }}
           >
-            Місце, де зберігається історія, живуть люди та розквітає природа.
-            Ласкаво просимо на офіційний сайт нашого села.
+            Старовинне подільське село з багатовіковою історією, першої письмової
+            згадки якого сягають{' '}
+            <Box component="span" sx={{ color: 'primary.main', fontWeight: 600 }}>
+              1493 року
+            </Box>
+            . Тут зберігаються пам'ятки від неоліту до наших днів.
           </Typography>
 
           <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} pt={1}>
@@ -90,12 +132,12 @@ export default function Hero() {
                 fontWeight: 600,
               }}
             >
-              Дізнатися більше
+              Про село
             </Button>
             <Button
               variant="outlined"
               size="large"
-              href="/news"
+              href="/history"
               sx={{
                 borderRadius: 2,
                 px: 4,
@@ -110,7 +152,7 @@ export default function Hero() {
                 },
               }}
             >
-              Новини
+              Історія
             </Button>
           </Stack>
         </Stack>

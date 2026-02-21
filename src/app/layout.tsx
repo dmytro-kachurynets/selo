@@ -16,8 +16,8 @@ const robotoSlab = Roboto_Slab({
 });
 
 export const metadata: Metadata = {
-  title: 'Село',
-  description: 'Офіційний сайт села',
+  title: 'Женишківці — офіційний сайт села',
+  description: 'Офіційний сайт села Женишківці Хмельницького району Хмельницької області. Історія, новини, галерея та контакти.',
 };
 
 export default function RootLayout({

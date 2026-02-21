@@ -26,6 +26,7 @@ const navLinks = [
   { label: 'Головна', href: '/' },
   { label: 'Новини', href: '/news' },
   { label: 'Про село', href: '/about' },
+  { label: 'Історія', href: '/history' },
   { label: 'Галерея', href: '/gallery' },
   { label: 'Контакти', href: '/contacts' },
 ];
@@ -68,7 +69,7 @@ export default function Header() {
                 mr: { md: 4 },
               }}
             >
-              Село
+              Женишківці
             </Typography>
 
             {/* Desktop nav */}

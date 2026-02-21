@@ -7,6 +7,7 @@ const footerLinks = [
   { label: 'Головна', href: '/' },
   { label: 'Новини', href: '/news' },
   { label: 'Про село', href: '/about' },
+  { label: 'Історія', href: '/history' },
   { label: 'Галерея', href: '/gallery' },
   { label: 'Контакти', href: '/contacts' },
 ];
@@ -42,10 +43,10 @@ export default function Footer() {
                 mb: 0.5,
               }}
             >
-              Село
+              Женишківці
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Офіційний сайт села
+              Офіційний сайт села · Хмельницька область
             </Typography>
           </Box>
 
@@ -68,7 +69,7 @@ export default function Footer() {
         <Divider sx={{ mb: 3 }} />
 
         <Typography variant="body2" color="text.secondary" textAlign="center">
-          © {year} Село. Всі права захищено.
+          © {year} Женишківці. Всі права захищено.
         </Typography>
       </Container>
     </Box>
